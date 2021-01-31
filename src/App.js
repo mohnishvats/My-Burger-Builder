@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Layout>
         <Route path="/" exact component={Burgerbuilder} />
-        <Route path="/" component={Orders} />
+        <Route path="/orders" component={Orders} />
         <Route path="/checkout" component={Checkout} />
       </Layout>
     </div>
