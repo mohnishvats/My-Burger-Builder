@@ -1,21 +1,22 @@
 import React from "react";
 import Burger from "../../../Components/Burger/Burger";
 import Button from "../../UI/Button/Button";
-import Aux from "../../../hoc/Aux";
+
+import "./CheckoutSummary.css";
 
 const checkoutsummary = (props) => {
   return (
-    <Aux>
+    <div className="CheckoutSummary">
       <div style={{ width: "100%", height: "300px", margin: "auto" }}>
         <Burger ingredients={props.ingredients} />
       </div>
-      <Button btnType="Danger" clicked>
+      <Button btnType="Danger" clicked={props.checkoutCancelled}>
         CANCEL
       </Button>
-      <Button btnType="Success" clicked>
+      <Button btnType="Success" clicked={props.checkoutContinued}>
         CONTINUE
       </Button>
-    </Aux>
+    </div>
   );
 };
 
